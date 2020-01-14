@@ -15,7 +15,8 @@
      *      
      *      createPlatform(type, position, delay);
      * 
-     *      type: "top", "bottom", "left", or "right"
+     *      type: "top", "bottom", " ////////////////////////////////////////////////////////////////////////
+        // ALL YOUR CODE GOES BELOW HERE left", or "right"
      *      position: The position of the cannon along whichever side the cannon is placed on
      *          - the x coordinate for "top" and "bottom" cannons
      *          - the y coordinate for "left" and "right" cannons
@@ -23,8 +24,7 @@
      */ 
     function init(game) {
         let createCannon = cannon.create;
-        ////////////////////////////////////////////////////////////////////////
-        // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
+        ///////////////////////////////////////
         
         // example: 
         createCannon("top", 450);
