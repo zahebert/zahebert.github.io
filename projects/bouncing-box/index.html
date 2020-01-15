@@ -6,8 +6,8 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 200px;
-			height: 300px;
+			width: 70px;
+			height: 70px;
 			background-color: teal;
 			font-size: 300%;
 			text-align: center;
@@ -82,7 +82,7 @@
 			function update() {
 				positionX = positionX + speed;
 				positionY = positionY + speed;
-				moveBoxTo(positionX);
+				moveBoxTo(positionX, positionY);
 				
 				if (positionX > boardWidth) {
 					speed = -speed;
@@ -98,7 +98,7 @@
 				
 				if (positionY < 0) {
 				}
-
+					speedY = -speedY;
 
 			}
 
