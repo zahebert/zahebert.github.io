@@ -32,7 +32,7 @@
 
 	<script>
 		(function(){
-			'use strict'
+			'use strict';
 			/* global jQuery */
 
 			//////////////////////////////////////////////////////////////////
@@ -42,6 +42,7 @@
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
+			var boardHeight = jQuery(window).height();
 
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
@@ -68,11 +69,8 @@
 			var positionX = 0;
 			var points = 0;
 			var speed = 10;
-			
-			var positionY = 0;
 			var speedY = 10;
-			var boardHeight = jQuery(window).height();
-
+			var positionY = 0;
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -81,25 +79,22 @@
 			*/
 			function update() {
 				positionX = positionX + speed;
-				positionY = positionY + speedY;
+				positionY= positionY + speedY;
 				moveBoxTo(positionX, positionY);
-				
-				if (positionX > boardWidth) {
-					speed = -speed;
-				}
-				
-				if (positionX < 0) {
-					speed = -speed;
-				}
-				
-				if (positionY > boardHeight) {
-					speedY = -speedY;
-				}
-				
-				if (positionY < 0) {
-				}
-					speedY = -speedY;
 
+				if (positionX > boardWidth){
+					speed = -speed;
+				}
+				if (positionX < 0){
+					speed = -speed;
+				}
+				
+				if (positionY > boardHeight){
+					speedY = -speedY;
+				}
+				if (positionY < 0){
+					speedY = -speedY;
+				}
 			}
 
 			/* 
@@ -115,8 +110,6 @@
 				
 				positionY = 0;
 				speedY = speedY + 3;
-				
-
 
 			}
 		})();
