@@ -117,24 +117,23 @@ var level01 = function (window) {
                 };
             }   
             
-            function createAward (x,y) {
-                var treasure = game.createGameItem('treasure', 50);
+            function createAward(x,y){
+                var treasure = game.createGameItem('reward', 25);
                     treasure.x = x;
                     treasure.y = y;
                     treasure.velocityX = -2;
                 
                 var diamond = draw.bitmap('img/diamond.png');
                     diamond.x = -25;
-                    diamond.y = -27;
-                    
-                    treasure.addChild(diamond);
-                    
-                    game.addGameItem(treasure);
-                    
-                    treasure.onPlayerCollision = function (){
-                        game.increaseScore(50);
-                        treasure.fadeOut();
-                    }
+                    diamond.y = -25;
+                
+                treasure.addChild(diamond);
+                game.addGameItem(treasure);
+                
+                treasure.onPlayerCollision = function() {
+                    game.increaseScore(50);
+                    treasure.fadeOut();
+                };
             }
             
             // code to do something with each element
