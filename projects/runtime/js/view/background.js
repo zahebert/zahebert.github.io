@@ -37,16 +37,16 @@ var background = function (window) {
             // TODO: 2 - Part 2
             // this fills the background with a obnoxious yellow
             // you should modify this to suit your game
-            var backgroundFill = draw.rect(canvasWidth, groundY,'blue');
+            var backgroundFill = draw.bitmap('img/city.png');
             background.addChild(backgroundFill);
             
             // TODO: 3 - Add a moon and starfield
-            var moon = draw.bitmap('img/moon.png');
-            moon.x = 400;
-            moon.y = 25;
-            moon.scaleX = .5;
-            moon.scaleY = .5;
-            background.addChild(moon);
+            var death = draw.bitmap('img/death star.png');
+            death.x = 400;
+            death.y = 10;
+            death.scaleX = .5;
+            death.scaleY = .5;
+            background.addChild(death);
             
             var circle;
             for(var i=0;i<100;i++) {
